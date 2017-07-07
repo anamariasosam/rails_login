@@ -1,5 +1,7 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Sign in with Github", user_github_omniauth_authorize_path %>
+<%= link_to "Sign in with instagram", user_instagram_omniauth_authorize_path %>
 
-<%= console %>
+<% if current_user %>
+<%= current_user.token %>
+<%  end %>

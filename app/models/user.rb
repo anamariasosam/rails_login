@@ -3,13 +3,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:github]
+         :omniauthable, :omniauth_providers => [:instagram]
 
 
   def self.from_omniauth(auth)
-    bug
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-     user.email = auth.info.email
+     user.email = "#{auth.info.nickname}@gmail.com"
+     user.token = auth.credentials.token
      user.password = Devise.friendly_token[0,20]
     end
   end
