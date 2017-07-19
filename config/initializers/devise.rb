@@ -250,7 +250,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :instagram, 'ce4bd1a333574642a02f857a30f3b8ca', '18cbbeb9acd74f8da4894889a9233f33', {:scope => "likes public_content"}
+  config.omniauth :twitter, 'G2IAOCCacmgXaDzupp9LvHGZL', 'jpiX4FuZ5Cd4uZ50UJZLHS6IRBMaLL1cE07ca3lxkjOaMrIB6q'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
